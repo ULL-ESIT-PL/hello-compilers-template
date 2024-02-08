@@ -17,6 +17,11 @@ program
 
 program.parse();
 
+function template(code) {
+    let root = __dirname.replace(/\/bin$/, '');
+    return `const {Complex, factorial, max, min, print } = require("${root}/src/support-lib.js");\n${code}`;
+  } 
+  
 function transpile(expression) {
  /* Feel free to modify it at your convenience */
 }
